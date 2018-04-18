@@ -1,0 +1,68 @@
+<div class="container main">
+    <div>
+        <h1>Reuseit</h1>
+        <p>Listed here are all examples of components using Handlebars.js and styled using Bootstrap v4.0</p>
+    </div>
+
+    <!--Textinput-->
+    <div class="padding">
+        <h3>Text Input</h3>
+        {{> formText
+                label="Username"
+                el_id="textInput"
+        }}
+    </div>
+
+    <!--Password-->
+    <div class="padding">
+        <h3>Password</h3>
+        {{> formPassword
+                label="Password"
+                el_id="password"
+        }}
+    </div>
+
+    <!--Email Input-->
+    <div class="padding">
+        <h3>Email Input</h3>
+        {{> formEmail
+                label="Email"
+                el_id="email"
+        }}
+    </div>
+
+    <!--Date Input-->
+    <div class="padding">
+        <h3>Date Input</h3>
+        {{> formDate
+                label="Username"
+        }}
+    </div>
+
+    <!--Small Button-->
+    <div class="padding">
+        <h3>Small Button</h3>
+        {{> formButton
+                label="small"
+                is_small=true
+        }}
+    </div>
+
+    <!--Block Button-->
+    <div class="padding">
+        <h3>Block Button</h3>
+        {{> formButton
+                label="block"
+                is_block=true
+        }}
+    </div>
+
+    <!--Checkbox-->
+    <div class="padding">
+        <h3>Checkbox</h3>
+        {{> formCheckbox
+                label="Click me"
+                is_block=true
+        }}
+    </div>
+</div>

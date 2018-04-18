@@ -39,10 +39,13 @@ module.exports = {
                 }
             },
             {
-                test: /\.hbs/,
-                use: {
-                    loader: "handlebars-loader"
-                }
+                test: /\.hbs$/,
+                use: [{
+                    loader: "handlebars-loader",
+                    options: {
+                        helperDirs: path.resolve(__dirname, './src/components')
+                    }
+                }]
             }
         ]
     },
@@ -53,5 +56,8 @@ module.exports = {
         stats: 'errors-only',
     },
     mode: 'development',
-    watch: true
+    watch: true,
+    node: {
+        fs: 'empty'
+    }
 };

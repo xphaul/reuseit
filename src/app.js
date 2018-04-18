@@ -2,15 +2,8 @@
 
 import './css/main.scss';
 
-const Textinput = require('./components/_textinput.hbs')
+const $ = require('jquery');
+const mainView = require('./main.hbs')
 
-document.addEventListener("DOMContentLoaded", function() {
-    var div = document.createElement('div');
-    div.innerHTML = Textinput({
-        el_id: 'fname2091',
-        label: 'First Name',
-        name: 'angel'
-    });
-    document.body.appendChild(div);
-});
+$('body').append(mainView)
 

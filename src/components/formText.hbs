@@ -1,6 +1,6 @@
 <div class="form-group">
     <label>{{label}}</label>
-    {{#if readonly}}
+    {{#if is_readonly}}
         <input id="{{el_id}}" name="{{name}}" value="{{value}}" type="text" class="form-control" readonly>
     {{else}}
         <input id="{{el_id}}" name="{{name}}" value="{{value}}" type="text" class="form-control" required>
