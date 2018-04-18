@@ -1,0 +1,40 @@
+{
+  "name": "reuseit",
+  "version": "1.0.0",
+  "description": "Reusable components using Handlebars.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xphaul/reuseit.git"
+  },
+  "author": "Paul Gonzales",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xphaul/reuseit/issues"
+  },
+  "homepage": "https://github.com/xphaul/reuseit#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.11",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.14"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.0",
+    "handlebars": "^4.0.11",
+    "handlebars-loader": "^1.7.0",
+    "jquery": "^3.3.1",
+    "node-sass": "^4.8.3",
+    "popper.js": "^1.14.3",
+    "postcss-loader": "^2.1.4",
+    "precss": "^3.1.2",
+    "sass-loader": "^7.0.1"
+  }
+}
