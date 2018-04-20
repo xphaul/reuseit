@@ -1,0 +1,16 @@
+<nav aria-label="Page navigation example">
+    <h1>{{pages}}</h1>
+    <ul class="pagination">
+        <li class="page-item {{^previous}}disabled{{/previous}}">
+            <a class="page-link" href="{{previous}}">Previous</a>
+        </li>
+        {{#pages}}
+        <li class="page-item">
+            <a class="page-link {{^selected}}active{{/selected}}" href="#">{{value}}</a>
+        </li>
+        {{/pages}}
+        <li class="page-item {{^next}}disabled{{/next}}">
+            <a class="page-link" href="{{next}}">Next</a>
+        </li>
+    </ul>
+</nav>

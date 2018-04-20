@@ -1,25 +1,46 @@
 {{#if is_submit}}
     {{#if is_small}}
-        <button type="submit" class="btn btn-success btn-sm " id="{{el_id}}">{{label}}</button>
+        <button type="submit" class="btn btn-success btn-sm " id="{{el_id}}" type="submit">{{label}}</button>
+    {{else if is_large}}
+        <button type="submit" class="btn btn-success btn-lg " id="{{el_id}}" type="submit">{{label}}</button>
     {{else}}
         {{#if is_block}}
-            <button type="submit" class="btn btn-success btn-block" id="{{el_id}}">{{label}}</button>
+            <button type="submit" class="btn btn-success btn-lg btn-block" id="{{el_id}}" type="submit">{{label}}</button>
         {{else}}
-            <button type="submit" class="btn btn-success" id="{{el_id}}">{{label}}</button>
+            <button type="submit" class="btn btn-success" id="{{el_id}}" type="submit">{{label}}</button>
+        {{/if}}
+    {{/if}}
+{{else if is_cancel}}
+    {{#if is_small}}
+        <button type="button" class="btn btn-danger btn-sm" id="{{el_id}}">{{label}}</button>
+    {{else if is_large}}
+        <button type="submit" class="btn btn-danger btn-lg " id="{{el_id}}" type="submit">{{label}}</button>
+    {{else}}
+        {{#if is_block}}
+            <button type="button" class="btn btn-danger btn-lg btn-block" id="{{el_id}}">{{label}}</button>
+        {{else}}
+            {{#if is_disabled}}
+                <button type="button" class="btn btn-danger" id="{{el_id}}" disabled>{{label}}</button>
+            {{else}}
+                <button type="button" class="btn btn-danger" id="{{el_id}}">{{label}}</button>
+            {{/if}}
         {{/if}}
     {{/if}}
 {{else}}
     {{#if is_small}}
-        <button type="button" class="btn btn-success btn-sm" id="{{el_id}}">{{label}}</button>
+        <button type="button" class="btn btn-primary btn-sm" id="{{el_id}}">{{label}}</button>
+    {{else if is_large}}
+        <button type="submit" class="btn btn-primary btn-lg " id="{{el_id}}" type="submit">{{label}}</button>
     {{else}}
         {{#if is_block}}
-            <button type="button" class="btn btn-success btn-block" id="{{el_id}}">{{label}}</button>
+            <button type="button" class="btn btn-primary btn-lg btn-block" id="{{el_id}}">{{label}}</button>
         {{else}}
             {{#if is_disabled}}
-                <button type="button" class="btn btn-success" id="{{el_id}}" disabled>{{label}}</button>
+                <button type="button" class="btn btn-primary" id="{{el_id}}" disabled>{{label}}</button>
             {{else}}
-                <button type="button" class="btn btn-success" id="{{el_id}}">{{label}}</button>
+                <button type="button" class="btn btn-primary" id="{{el_id}}">{{label}}</button>
             {{/if}}
         {{/if}}
     {{/if}}
 {{/if}}
+

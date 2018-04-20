@@ -1,4 +1,4 @@
-<div class="container main">
+<form class="container-fluid main needs-validation">
     <div>
         <h1>Reuseit</h1>
         <p>Listed here are all examples of components using Handlebars.js and styled using Bootstrap v4.0</p>
@@ -27,7 +27,7 @@
         <h3>Email Input</h3>
         {{> formEmail
                 label="Email"
-                el_id="email"
+                el_id="emailx"
         }}
     </div>
 
@@ -36,6 +36,7 @@
         <h3>Date Input</h3>
         {{> formDate
                 label="Username"
+                el_id="date"
         }}
     </div>
 
@@ -43,8 +44,71 @@
     <div class="padding">
         <h3>Small Button</h3>
         {{> formButton
-                label="small"
+                label="Submit"
                 is_small=true
+                el_id="btn_sm1"
+                is_submit=true
+
+        }}
+        {{> formButton
+                label="Cancel"
+                is_small=true
+                el_id="btn_sm2"
+                is_cancel=true
+
+        }}
+        {{> formButton
+                label="Okay"
+                is_small=true
+                el_id="btn_sm3"
+
+        }}
+    </div>
+
+    <!--Normal Button-->
+    <div class="padding">
+        <h3>Normal Button</h3>
+        {{> formButton
+                label="Submit"
+                el_id="btn1"
+                is_submit=true
+
+        }}
+        {{> formButton
+                label="Cancel"
+                el_id="btn2"
+                is_cancel=true
+
+        }}
+        {{> formButton
+                label="Okay"
+                el_id="btn3"
+
+        }}
+    </div>
+
+    <!--Normal Button-->
+    <div class="padding">
+        <h3>Large Button</h3>
+        {{> formButton
+                label="Submit"
+                el_id="btn_lg1"
+                is_large=true
+                is_submit=true
+
+        }}
+        {{> formButton
+                label="Cancel"
+                el_id="btn_lg2"
+                is_large=true
+                is_cancel=true
+
+        }}
+        {{> formButton
+                label="Okay"
+                is_large=true
+                el_id="btn_lg3"
+
         }}
     </div>
 
@@ -52,8 +116,21 @@
     <div class="padding">
         <h3>Block Button</h3>
         {{> formButton
-                label="block"
+                label="Submit"
                 is_block=true
+                is_submit=true
+                el_id="btn_block1"
+        }}
+        {{> formButton
+                label="Cancel"
+                is_block=true
+                el_id="btn_block2"
+                is_cancel=true
+        }}
+        {{> formButton
+                label="Okay"
+                is_block=true
+                el_id="btn_block3"
         }}
     </div>
 
@@ -61,8 +138,62 @@
     <div class="padding">
         <h3>Checkbox</h3>
         {{> formCheckbox
-                label="Click me"
+                label="Apple"
                 is_block=true
+                el_id="chckbx1"
+        }}
+        {{> formCheckbox
+                label="Mango"
+                is_block=true
+                el_id="chckbx2"
+        }}
+        {{> formCheckbox
+                label="Orange"
+                is_block=true
+                el_id="chckbx3"
         }}
     </div>
-</div>
+
+    <!--Radio-->
+    <div class="padding">
+        <h3>Radio Button</h3>
+        {{> formRadio
+                label="Blue"
+                is_block=true
+                el_id="radio1"
+                name="exampleRadios"
+        }}
+        {{> formRadio
+                label="Red"
+                is_block=true
+                el_id="radio2"
+                name="exampleRadios"
+        }}
+        {{> formRadio
+                label="Yellow"
+                is_block=true
+                el_id="radio3"
+                name="exampleRadios"
+        }}
+    </div>
+
+    <!--Pagination-->
+    <div class="padding">
+        <h3>Pagination</h3>
+        {{> pagination
+                previous= '#'
+                next= '#'
+        }}
+    </div>
+
+    <!--Validation-->
+    <h3>Validation</h3>
+    <p>Click on this button to check validation</p>
+    {{> formButton
+            label="Submit"
+            is_block=true
+            is_submit=true
+            el_id="block_btn"
+    }}
+</form>
+
