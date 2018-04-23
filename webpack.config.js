@@ -1,5 +1,6 @@
 
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
     entry: './src/app.js',
@@ -40,24 +41,21 @@ module.exports = {
             },
             {
                 test: /\.hbs$/,
-                use: [{
-                    loader: "handlebars-loader",
-                    options: {
-                        helperDirs: path.resolve(__dirname, './src/components')
-                    }
-                }]
+                use: {
+                    loader: "handlebars-template-loader"
+                }
             }
         ]
     },
-    devServer: {
-        hot: true,
-        compress: true,
-        open: true,
-        stats: 'errors-only',
-    },
-    mode: 'development',
-    watch: true,
     node: {
         fs: 'empty'
-    }
+    },
+    plugins: [
+        new webpack.DefinePlugin({
+            'process_env': {
+                'NODE_ENV': JSON.stringify('production')
+            }
+        })
+    ],
+    mode: 'production'
 };
